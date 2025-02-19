@@ -2,6 +2,7 @@ import Branding from '@/components/branding'
 import ContentBlock from '@/components/content-block'
 import PetDetails from '@/components/pet-details'
 import PetList from '@/components/pet-list'
+import PetButton from '@/components/pet_button'
 import SearchForm from '@/components/search-form'
 
 import Stats from '@/components/stats'
@@ -25,6 +26,7 @@ export default  function Dashboard() {
         <div className='md:row-start-2 md:row-span-full md:col-start-1 md:col-span-1'>
           <ContentBlock>
             <PetList/>
+            <PetButton actionType="add"/>
           </ContentBlock>
         </div>
         
@@ -38,3 +40,4 @@ export default  function Dashboard() {
     </main>
   )
 }
+0
