@@ -5,7 +5,7 @@ import React from 'react'
 import PetButton from './pet_button';
 
 export default function PetDetails() {
-  const {selectedPet} = usePetContext();
+  const {selectedPet,handleCheckoutPet} = usePetContext();
   return (
     <section className='flex flex-col h-full w-full'>
       {
@@ -26,9 +26,9 @@ export default function PetDetails() {
 
               />
               <h2 className='text-3xl font-semibold leading-7 ml-5'>{selectedPet?.name}</h2>
-              <div className='ml-auto'>
-                <PetButton actionType = "edit"/>
-                <PetButton actionType = "checkout"/>
+              <div className='ml-auto space-x-3'>
+                <PetButton actionType = "edit">Edit</PetButton>
+                <PetButton actionType = "checkout" onClick={() => handleCheckoutPet(selectedPet.id)}>Checkout</PetButton>
               </div>
               
             </div>
